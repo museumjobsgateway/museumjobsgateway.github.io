@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 20px;
+}
+body {
+  color: #333;
+  font-family: fira sans;
+  font-weight: 100;
+  line-height: 1.5;
+}
+[class*="__columns"] {
+  display: flex;
+}
+[class*="__button"] {
+  border-radius: 5px;
+  box-shadow: -1px 1px 0 #000;
+  font-family: roboto condensed;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-shadow: 1px 1px 0 #000;
+}
+.container {
+  position: relative;
+}
+[class*="__container"] {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+  [class*="__container"] {
+    background-color: #ff0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  [class*="__container"] {
+    background-color: #ffa500;
+  }
+}
+img,
+iframe,
+embed {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.placeholders,
+.ph {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='100%' y1='0' x2='0' y2='100%' stroke='{green}' stroke-width='2'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0' y1='0' x2='100%' y2='100%' stroke='{green}' stroke-width='2'/></svg>");
+}
+html {
+  font-size: 20px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  color: lead;
+  font-family: 'Open Sans' , sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+[class*='__heading'] {
+  color: #fff;
+  font-size: 6rem;
+  line-height: 1;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000;
+}
+[class*='__subheading'] {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000;
+}
+[class*='__title'] {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: nightgreen;
+  text-decoration: none;
+}
+[class*='content'] > * {
+  margin-bottom: 1.5rem;
+}
+.data__layer {
+  background-color: #4b0082;
+}
+.data__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.data__container div {
+  text-align: center;
+}
+.feature__layer {
+  background-attachment: fixed;
+  background-image: url("img/museum-bw.jpg"), linear-gradient(135deg, #f00, #4b0082);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.feature__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.nav__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+}
+.nav__container {
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1024px;
+}
+.nav__container span {
+  font-weight: 900;
+}
+.nav__container a {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+}
+.nav__container a:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #4b0082;
+}
+.nav__logo {
+  color: #fff;
+}
