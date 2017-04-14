@@ -33,16 +33,19 @@ html(class='no-js')
             
       .feature__layer
         .feature__container
-          h1.feature__heading <span>YOU</span>SEUM
+          h1.feature__heading Resources
           h2.feature__subheading Your museum data and job center
           
-      #thing.data__layer
-        .data__container
-          .left 
-            h2.data__subheading Museums contribute $21 Billion to the United States economy each year (AAM Museum Factsheet)
-          .right
-            h1.data__heading $
-              span#count
+      #thing.resource__layer
+        .resource__container
+          .resource__content
+            for item in resources
+              .resource__item
+                h2=item.name
+                .resource__links
+                  for link in item.links
+                    a(href=`${link.url}` class="resource__button")=link.text
+
           
 
     //- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
