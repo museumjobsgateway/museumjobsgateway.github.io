@@ -1,0 +1,16 @@
+//- This page uses the global layout
+extends ../layout/global
+
+//- Fill in title and description for SEO
+block seo
+  title=seo.youth.title
+  meta(name='description', content=`${seo.youth.description}`)
+    
+//- Index page specific content only
+block page
+  //- include ../includes/home/feature
+  
+  .youth-feature__layer
+    .youth-feature__container
+      h1.youth-feature__heading youth
+      h2.youth-feature__subheading You will love it!

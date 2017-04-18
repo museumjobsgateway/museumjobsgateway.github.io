@@ -1,0 +1,16 @@
+//- This page uses the global layout
+extends ../layout/global
+
+//- Fill in title and description for SEO
+block seo
+  title=seo.teachers.title
+  meta(name='description', content=`${seo.teachers.description}`)
+    
+//- Index page specific content only
+block page
+  //- include ../includes/home/feature
+  
+  .teachers-feature__layer
+    .teachers-feature__container
+      h1.teachers-feature__heading Teachers
+      h2.teachers-feature__subheading You will love it!

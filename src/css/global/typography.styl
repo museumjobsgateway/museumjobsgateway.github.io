@@ -4,18 +4,23 @@ base-line-height = 1.5
 
 
 // Typefaces
-
 Sans = {
-  font: 'Open Sans'\, sans-serif,
+  font: 'Fira Sans'\, sans-serif,
   weight: {
-    light: 300,
+    light: 100,
     normal: 400,
-    semi: 600,
-    bold: 700,
-    ultra: 800
+    bold: 900
   }
 }
 
+Condensed = {
+  font: 'Fira Sans Extra Condensed'\, serif,
+  weight: {
+    light: 100,
+    normal: 400,
+    bold: 900
+  }
+}
 
 
 // Line height function
@@ -42,15 +47,18 @@ body
 
 [class*='__heading']
   color white
+  font-family: Condensed.font
   font-size 6rem
+  font-weight: Condensed.weight.normal
   line-height 1
   text-align center
   text-shadow -1px 1px 0 black
+  text-transform uppercase
 
 [class*='__subheading']
   color white
   font-size 2rem
-  font-weight 100
+  font-weight: Condensed.weight.normal
   text-align center
   text-shadow -1px 1px 0 black
 
@@ -60,7 +68,6 @@ body
   font-weight 100
   text-align center
   text-shadow -1px 1px 0 black
-
 
 // Anchor text
 a

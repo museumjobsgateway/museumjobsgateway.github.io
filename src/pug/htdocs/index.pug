@@ -1,60 +1,66 @@
-doctype html
-html(class='no-js')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    meta(name='format-detection', content='telephone=no')
+//- This page uses the global layout
+extends ../layout/global
 
-    title useumstl
-
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-
-    //link(rel='stylesheet', href='css/normalize.css')
-    link(rel='stylesheet', href='style.css')
-    //script(src='js/vendor/modernizr-2.6.2.min.js')
-    //- script(src='countUp.js')
-    //- script(src='waypoints.js')
-    //- script(src='inview.min.js')
-
-  body
-    .container
-      .nav__layer
-        .nav__container
-          a(href="#" class="nav__logo") <span>YOU</span>SEUM
-          div
-            a(href="#") About
-            a(href="#") Youth
-            a(href="#") Parents
-            a(href="#") Teachers
-            a(href="#") Counselors
-            a(href="resources.html") Resources
-            
-      .feature__layer
-        .feature__container
-          h1.feature__heading <span>YOU</span>SEUM
-          h2.feature__subheading Your museum data and job center
-          
-      #thing.data__layer
-        .data__container
-          .left 
-            h2.data__subheading Museums contribute $21 Billion to the United States economy each year (AAM Museum Factsheet)
-          .right
-            h1.data__heading $
-              span#count
-          
-
-    //- script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    //- script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    //- script(src='js/plugins.js')
+//- Fill in title and description for SEO
+block seo
+  title=seo.homepage.title
+  meta(name='description', content=`${seo.homepage.description}`)
     
-    script(src='script.js')
-    //- 
-    //- script
-    //-   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    //-   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    //-   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    //-   e.src='//www.google-analytics.com/analytics.js';
-    //-   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    //-   ga('create','UA-XXXXX-X');ga('send','pageview');
+//- Index page specific content only
+block page
+  //- include ../includes/home/feature
+  
+  .homepage-feature__layer
+    .homepage-feature__container
+      h1.homepage-feature__heading Work at a museum
+      h2.homepage-feature__subheading You will love it!
+      
+  #thing.data__layer
+    .data__container
+      .left 
+        h2.data__subheading Museums contribute $21 Billion to the United States economy each year (AAM Museum Factsheet)
+      .right
+        h1.data__heading $
+          span#count
+            
+  .youth__layer
+    .youth__container
+      .left 
+        h1.youth__heading Youth
+      .right
+        h2.youth__subheading $
+          span#count
+            
+  .parents__layer
+    .parents__container
+      .left 
+        h1.parents__heading Parents
+      .right
+        h2.parents__subheading $
+          span#count
+            
+  .teachers__layer
+    .teachers__container
+      .left 
+        h1.teachers__heading Teachers
+      .right
+        h2.teachers__subheading $
+          span#count
+            
+  .counselors__layer
+    .counselors__container
+      .left 
+        h1.counselors__heading Career counselors
+      .right
+        h2.counselors__subheading $
+          span#count
+            
+  .resources__layer
+    .resources__container
+      .left 
+        h1.resources__heading Resources
+      .right
+        h2.resources__subheading $
+          span#count
+            
+          

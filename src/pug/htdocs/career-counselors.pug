@@ -1,0 +1,17 @@
+//- This page uses the global layout
+extends ../layout/global
+
+//- Fill in title and description for SEO
+block seo
+  title=seo.counselors.title
+  meta(name='description', content=`${seo.counselors.description}`)
+    
+//- Index page specific content only
+block page
+  //- include ../includes/home/feature
+  
+  .counselors-feature__layer
+    .counselors-feature__container
+      h1.counselors-feature__heading Career Counselors
+      h2.counselors-feature__subheading You will love it!
+          

@@ -1,0 +1,40 @@
+.nav
+
+  &__layer
+    background-color white
+    position absolute
+    top 0
+    left 0
+    width 100vw
+    z-index 1
+
+  &__container
+    //border-bottom 1px solid white
+    display flex
+    align-items center
+    justify-content space-between
+    margin 0
+    //padding 0 2rem
+    max-width 100%
+
+    //text-shadow -1px 1px 0 black
+
+    h1
+      font-size 1rem
+      text-transform uppercase
+
+      span
+        font-weight: Condensed.weight.bold
+
+    a
+      color indigo
+      display inline-block
+      font-weight 400
+      padding .5rem 1rem
+
+      &:hover
+        background-color indigo
+        color white
+
+  &__logo
+    color white

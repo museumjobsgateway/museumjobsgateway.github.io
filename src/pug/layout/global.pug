@@ -1,0 +1,24 @@
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='format-detection', content='telephone=no')
+      
+    block seo
+    
+    link(rel='stylesheet', href='/style.css')
+    //-script(src='javascripts/vendor/modernizr-2.7.1.min.js')
+    link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,400,900|Fira+Sans:100,400,400i,900" rel="stylesheet")  
+    
+  body
+    .container
+      //- Build the utility and main navs
+      include ../includes/global/nav
+      
+      //- Page specific content goes here
+      block page
+
+      //- Include footer obviously
+      include ../includes/global/footer

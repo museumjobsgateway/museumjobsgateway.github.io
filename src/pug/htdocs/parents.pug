@@ -1,0 +1,16 @@
+//- This page uses the global layout
+extends ../layout/global
+
+//- Fill in title and description for SEO
+block seo
+  title=seo.parents.title
+  meta(name='description', content=`${seo.parents.description}`)
+    
+//- Index page specific content only
+block page
+  //- include ../includes/home/feature
+  
+  .parents-feature__layer
+    .parents-feature__container
+      h1.parents-feature__heading Parents
+      h2.parents-feature__subheading You will love it!

@@ -163,7 +163,9 @@ gulp.task('log', () => {
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      branch: 'master'
+    }));
 });
 
 // Todo task
