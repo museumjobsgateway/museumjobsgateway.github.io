@@ -13,7 +13,8 @@ block page
   .homepage-feature__layer
     .homepage-feature__container
       h1.homepage-feature__heading Work at a museum
-      h2.homepage-feature__subheading Here's why ->
+      h2.homepage-feature__subheading Here's why
+      icon(name="ei-arrow-down" size="m" class="lookdown")
       
       
   .jobs__layer
@@ -24,8 +25,8 @@ block page
         .jobs__content
           p Director, Curator, Registrar, Docent, Museum Educator, Exhibit Designer, Museum Protection Staff, Preparator, Public Relations, Show Worker, Building and Grounds Staff, Chef, Librarian, Accountant, Grant Coordinator, Housekeeper, AV Tech, HR, Membership Officer, Installer, Electrician, Carpenter, Financial Officer, Payroll officer, Public Historian and more!
           p
-            a(href="#") Watch video
-            a(href="#") See resources
+            a.jobs__button(href="#") Watch video
+            a.jobs__button(href="#") See resources
       
   .gallery__layer
     .gallery__container
@@ -35,46 +36,7 @@ block page
         a(href="/parents.html") Parents
         a(href="/teachers.html") Teachers
         a(href="/career-counselors.html") Career counselors
-          
-  #thing.data__layer
-    .data__container
-      .left 
-        h1.data__heading Did you know...
-      .right
-        h2.data__subheading Museums directly contribute $21 billion to the U.S. economy each year1
-            
-  .youth__layer
-    .youth__container
-      h1.youth__heading There are dozens of job roles within a Museum
-      h2.youth__subheading Our Maplewood elementary students made a video to showcase all these exciting professions
-  .youth__layer
-    .responsive-video-embed
-          iframe( src="https://www.youtube.com/embed/J8GUYg6pwZs" frameborder="0" allowfullscreen)
-            
-  .parents__layer
-    .parents__container
-      .left 
-        h1.parents__heading Parents
-      .right
-        h2.parents__subheading $
-          span#count
-            
-  .teachers__layer
-    .teachers__container
-      .left 
-        h1.teachers__heading Teachers
-      .right
-        h2.teachers__subheading $
-          span#count
-            
-  .counselors__layer
-    .counselors__container
-      .left 
-        h1.counselors__heading Career counselors
-      .right
-        h2.counselors__subheading $
-          span#count
-            
+        
   .resources__layer
     .resources__container
       .left 
@@ -82,5 +44,45 @@ block page
       .right
         h2.resources__subheading $
           span#count
+          
+  //- #thing.data__layer
+  //-   .data__container
+  //-     .left 
+  //-       h1.data__heading Did you know...
+  //-     .right
+  //-       h2.data__subheading Museums directly contribute $21 billion to the U.S. economy each year1
+  //-           
+  //- .youth__layer
+  //-   .youth__container
+  //-     h1.youth__heading There are dozens of job roles within a Museum
+  //-     h2.youth__subheading Our Maplewood elementary students made a video to showcase all these exciting professions
+  //- .youth__layer
+  //-   .responsive-video-embed
+  //-         iframe( src="https://www.youtube.com/embed/J8GUYg6pwZs" frameborder="0" allowfullscreen)
+  //-           
+  //- .parents__layer
+  //-   .parents__container
+  //-     .left 
+  //-       h1.parents__heading Parents
+  //-     .right
+  //-       h2.parents__subheading $
+  //-         span#count
+  //-           
+  //- .teachers__layer
+  //-   .teachers__container
+  //-     .left 
+  //-       h1.teachers__heading Teachers
+  //-     .right
+  //-       h2.teachers__subheading $
+  //-         span#count
+  //-           
+  //- .counselors__layer
+  //-   .counselors__container
+  //-     .left 
+  //-       h1.counselors__heading Career counselors
+  //-     .right
+  //-       h2.counselors__subheading $
+  //-         span#count
+            
             
           
