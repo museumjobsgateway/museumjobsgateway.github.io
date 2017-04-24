@@ -24,6 +24,7 @@
 
     a
       background-size cover
+      background-blend-mode overlay
       border 10px solid white
       color white
       display block
@@ -32,13 +33,13 @@
       margin 1rem
 
       &:nth-of-type(1)
-        background-image url(img/youth-bw.jpg)
+        background-image url(img/museum-bw.jpg), linear-gradient(135deg, #0fc, indigo)
       &:nth-of-type(2)
-        background-image url(img/parents-bw.jpg)
+        background-image url(img/parents-bw.jpg), linear-gradient(135deg, #fc0, indigo)
       &:nth-of-type(3)
-        background-image url(img/teachers-bw.jpg)
+        background-image url(img/teachers-bw.jpg), linear-gradient(135deg, green, tomato)
       &:nth-of-type(4)
-        background-image url(img/counselors-bw.jpg)
+        background-image url(img/counselors-bw.jpg), linear-gradient(135deg, #fc0, green, indigo)
 
   &__heading
     // color indigo
