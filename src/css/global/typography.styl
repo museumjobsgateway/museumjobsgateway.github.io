@@ -32,15 +32,17 @@ line-height-function()
 cal-line-height = line-height-function()
 
 
-html
+:root
+  font-size 20px
   font-size base-font-size
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
 
 
 body
-  color lead
+  color charcoal
   font-family: Sans.font
+    font-weight normal
   line-height base-line-height
   margin 0
 
@@ -79,7 +81,7 @@ a
 
 
 // Content Areas
-[class*='content']
+[class*='__content']
   // Add margin bottom to all elements inside this container
   & > *
     margin-bottom 1.5rem
