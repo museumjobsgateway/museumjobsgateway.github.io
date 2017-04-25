@@ -20,7 +20,7 @@ var options = {
 
 //var count = document.getQuerySelector('.count')
 
-var numAnim = new CountUp("count", 0, 21000000000,0,3, options);
+var numAnim = new CountUp("count", 0, 21,0,3, options);
 numAnim.start();
 
 
