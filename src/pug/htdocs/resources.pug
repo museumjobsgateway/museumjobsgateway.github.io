@@ -13,14 +13,14 @@ block page
   .resource-feature__layer
     .resource-feature__container
       h1.resource-feature__heading Resources
-      h2.resource-feature__subheading You will love it!
+      h2.resource-feature__subheading To get a job or to get involved
   
   .resource__layer
     .resource__container
       .resource__content
         for item in resources
           .resource__item
-            h2=item.name
+            h2.resource__heading=item.name
             .resource__links
               for link in item.links
                 a(href=`${link.url}` class="resource__button")=link.text

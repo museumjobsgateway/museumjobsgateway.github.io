@@ -79,13 +79,19 @@ gulp.task('js', function() {
       'src/js/vendor/countUp/dist/countUp.min.js',
       'src/js/vendor/waypoints/lib/noframework.waypoints.min.js',
       'src/js/vendor/waypoints/lib/shprtcuts/inview.min.js',
+      'src/js/vendor/smoothScroll.js',
       'src/js/script.js',
     ])
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest(distPath))
-        .pipe(rename('script.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(distPath));
+      .pipe(plumber({
+        errorHandler: function (error) {
+          console.log(error.message);
+          this.emit('end');
+      }}))
+      .pipe(concat('script.js'))
+      .pipe(gulp.dest(distPath))
+      .pipe(rename('script.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest(distPath));
 });
 
 // gulp.task('js', function (cb) {

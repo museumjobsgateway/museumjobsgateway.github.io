@@ -17,25 +17,45 @@ numAnim.start();
 
 
 
-var waypoint = new Waypoint({
-  element: document.getElementById('thing'),
-  handler: function() {
-    notify('Basic waypoint triggered')
-  }
-})
+// var waypoint = new Waypoint({
+//   element: document.getElementById('thing'),
+//   handler: function() {
+//     notify('Basic waypoint triggered')
+//   }
+// })
 
-var inview = new Waypoint.Inview({
-  element: document.getElementById('thing'),
-  enter: function(direction) {
-    console.log('Enter triggered with direction ' + direction)
-  },
-  entered: function(direction) {
-    console.log('Entered triggered with direction ' + direction)
-  },
-  exit: function(direction) {
-    console.log('Exit triggered with direction ' + direction)
-  },
-  exited: function(direction) {
-    console.log('Exited triggered with direction ' + direction)
+// var inview = new Waypoint.Inview({
+//   element: document.getElementById('thing'),
+//   enter: function(direction) {
+//     console.log('Enter triggered with direction ' + direction)
+//   },
+//   entered: function(direction) {
+//     console.log('Entered triggered with direction ' + direction)
+//   },
+//   exit: function(direction) {
+//     console.log('Exit triggered with direction ' + direction)
+//   },
+//   exited: function(direction) {
+//     console.log('Exited triggered with direction ' + direction)
+//   }
+// });
+
+var museum = museum || {};
+
+museum.init = (function() {
+  var scrollButton = document.getElementById('scrollButton');
+  var intro = document.getElementById('intro');
+
+  function scrollTo() {
+    scrollButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      intro.scrollIntoView({block: "end", behavior: 'smooth'});
+      //console.log('hello');
+    });
   }
-})
+  return {
+    scrollTo: scrollTo
+  }
+})();
+
+museum.init.scrollTo();

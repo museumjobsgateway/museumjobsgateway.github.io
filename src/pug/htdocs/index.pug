@@ -14,10 +14,11 @@ block page
     .homepage-feature__container
       h1.homepage-feature__heading Work at a museum
       h2.homepage-feature__subheading Here's why
-      icon(name="ei-arrow-down" size="m" class="lookdown")
+      a(href="#" id="scrollButton")
+        icon(name="ei-arrow-down" size="m" class="lookdown")
       
       
-  .jobs__layer
+  #intro.jobs__layer
     .jobs__container
       .jobs__card
         h1.jobs__heading.animated.bounceIn Museums are hiring!
@@ -25,8 +26,8 @@ block page
         .jobs__content
           p Director, Curator, Registrar, Docent, Museum Educator, Exhibit Designer, Museum Protection Staff, Preparator, Public Relations, Show Worker, Building and Grounds Staff, Chef, Librarian, Accountant, Grant Coordinator, Housekeeper, AV Tech, HR, Membership Officer, Installer, Electrician, Carpenter, Financial Officer, Payroll officer, Public Historian and more!
           .jobs__box
-            a.jobs__button(href="#") Watch video
-            a.jobs__button(href="#") See resources
+            a.jobs__button(href="/youth.html") Watch video
+            a.jobs__button(href="/resources.html") See resources
             
   .stats__layer
     h1.stats__heading Did you know...
