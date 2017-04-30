@@ -78,7 +78,7 @@ gulp.task('js', function() {
     return gulp.src([
       'src/js/vendor/countUp/dist/countUp.min.js',
       'src/js/vendor/waypoints/lib/noframework.waypoints.min.js',
-      'src/js/vendor/waypoints/lib/shprtcuts/inview.min.js',
+      'src/js/vendor/waypoints/lib/shortcuts/inview.min.js',
       'src/js/vendor/smoothScroll.js',
       'src/js/script.js',
     ])
