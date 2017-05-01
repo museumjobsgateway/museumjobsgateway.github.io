@@ -28,29 +28,31 @@ block page
           //- .jobs__box
           //-   a.jobs__button(href="/youth.html") Watch video
           //-   a.jobs__button(href="/resources.html") See resources
-            
-  .stats__layer
-    h1.stats__heading Did you know...
-          
+  
+  .stats__layer        
     .stats__container
-      
-      .stats__box
+      h1.stats__heading Did you know...
+            
+    .stats__container
+      #stat1Box.stats__box
         .frame-border
           .frame-inset
-            h3.stats__number#count 1,700
-        h2.stats__subheading people are employed by St. Louis area museums
+            h3#stat1.stats__number 1,700
+        h2#stat1Heading.stats__subheading people are employed by St. Louis area museums
         
-      .stats__box
+    .stats__container
+      #stat2Box.stats__box
         .frame-border
           .frame-inset
-            h3.stats__number#count 40
-        h2.stats__subheading Museum and Non-profit arts and culture institutions in the St. Louis total more than
+            h3#stat2.stats__number 40
+        h2#stat2Heading.stats__subheading Museum and Non-profit arts and culture institutions in the St. Louis total more than
         
-      .stats__box
+    .stats__container
+      #stat3Box.stats__box
         .frame-border
           .frame-inset
-            h3.stats__number#count 120
-        h2.stats__subheading million people visit Midwest museums each year
+            h3#stat3.stats__number 120
+        h2#stat3Heading.stats__subheading million people visit Midwest museums each year
       
   .gallery__layer
     .gallery__container

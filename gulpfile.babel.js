@@ -12,6 +12,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer'
 import pug from 'gulp-pug';
 import stylus from 'gulp-stylus';
+
 import evilicons from 'gulp-evil-icons';
 import plumber from 'gulp-plumber';
 import todo from 'gulp-todo';
@@ -51,11 +52,7 @@ const watchJsPath = 'src/js/**/*.js';
 
 // Autoprefixer options
 const autoprefixerOptions = {
-  browsers: [
-    'last 2 versions',
-    '> 5%',
-    'Firefox ESR'
-  ]
+  browsers: ['ie >= 8', 'ie_mob >= 10', 'ff >= 3.6', 'chrome >= 10', 'safari >= 5.1', 'opera >= 11', 'ios >= 7', 'android >= 4.1', 'bb >= 10']
 };
 
 // BrowserSync Settings and task
@@ -114,8 +111,22 @@ gulp.task('stylus', function() {
         this.emit('end');
     }}))
   	.pipe(sourcemaps.init())
-    .pipe(stylus())
+    .pipe(stylus({compress: true}))
     .pipe(sourcemaps.write())
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest(distPath))
+    .pipe(browserSync.stream());
+});
+
+// Compile stylus into CSS & auto-inject into browsers
+gulp.task('stylusProd', function() {
+  return gulp.src('src/css/style.styl')
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(stylus({compress: true}))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest(distPath))
     .pipe(browserSync.stream());
@@ -167,7 +178,7 @@ gulp.task('log', () => {
   console.dir(data);
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['stylusProd'],  function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
       branch: 'master'
