@@ -13,12 +13,14 @@ block page
   .resource.feature__layer
     .feature__container
       h1.feature__heading Resources
-      h2.feature__subheading Get a job/Get involved
+      h2.feature__subheading Get involved. Get a job!
   
   .resource__layer
     .resource__container
       .resource__content
-        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
+        p Have you ever wanted to know how to get hired at a museum? What are the various kinds of museums? What’s the salary range for distinct kinds of positions within a museum? To identify the attributes, skills, and experience needed to succeed in today’s museums, explore the resources listed on this page. Download PDF materials. Contact and visit museums, locally or wherever you travel. Learn as much as you about any museum that’s of interest to you. Get involved. It’s on you to use resources here and via other sources to “get hired”. 
+        
+      h2.resource__heading Links
         
       div
         for item in resources
@@ -27,3 +29,14 @@ block page
             .resource__links
               for link in item.links
                 a(href=`${link.url}` class="resource__text-link")=link.text
+                
+      h2.resource__heading Downloads
+      
+      div
+        div
+          for item in downloads
+            .resource__item
+              h2.resource__subheading=item.name
+              .resource__links
+                for link in item.links
+                  a(href=`${link.url}` class="resource__text-link")=link.text

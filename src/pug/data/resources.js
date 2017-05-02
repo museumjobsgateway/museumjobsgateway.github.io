@@ -58,6 +58,15 @@ export default {
       ]
     },
     {
+      name: "Central Prints",
+      links:[
+        {
+          text: "Homepage",
+          url: "https://www.centralprint.org/"
+        },
+      ]
+    },
+    {
       name: "St. Louis Public Library",
       links:[
         {
@@ -88,15 +97,6 @@ export default {
         {
           text: "Programs",
           url: "http://camstl.org/programs/"
-        },
-      ]
-    },
-    {
-      name: "The Griot Museum of Black History",
-      links:[
-        {
-          text: "Homepage",
-          url: "http://www.thegriotmuseum.com"
         },
       ]
     },
@@ -170,6 +170,15 @@ export default {
         {
           text: "Outreach",
           url: "http://www.laumeiersculpturepark.org/outreach-programs/"
+        },
+      ]
+    },
+    {
+      name: "The Griot Museum of Black History",
+      links:[
+        {
+          text: "Homepage",
+          url: "http://www.thegriotmuseum.com"
         },
       ]
     },

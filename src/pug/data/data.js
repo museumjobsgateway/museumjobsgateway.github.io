@@ -1,4 +1,5 @@
 // Import all data files
+import downloads from './downloads';
 import resources from './resources';
 import seo from './seo';
 
@@ -6,4 +7,5 @@ import seo from './seo';
 export default Object.assign({},
   resources,
   seo,
+  downloads,
 );

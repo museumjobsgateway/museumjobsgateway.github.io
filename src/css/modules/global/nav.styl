@@ -18,14 +18,33 @@
     max-width 100%
     //font-size 1rem
 
-    h1
-      text-transform uppercase
-      font-size 1.2rem
+  &__heading
+    color indigo
+    line-height 1.5
+    text-shadow none
+    text-transform uppercase
+    font-size 1.2rem
 
-      span
-        font-weight: Condensed.weight.bold
+    span
+      font-weight: Condensed.weight.bold
 
     a
+      display block
+      padding .5rem 1rem
+
+      &:hover
+        background-color indigo
+        color white
+
+  &__links
+    display flex
+    align-items center
+    justify-content center
+
+    a
+      display block
+      font-family: Condensed.font
+      font-size 1.2rem
       color indigo
       display inline-block
       font-weight 400
@@ -34,6 +53,3 @@
       &:hover
         background-color indigo
         color white
-
-  &__logo
-    color white
