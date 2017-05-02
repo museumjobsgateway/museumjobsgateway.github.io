@@ -10,17 +10,20 @@ block seo
 block page
   //- include ../includes/home/feature
   
-  .resource-feature__layer
-    .resource-feature__container
-      h1.resource-feature__heading Resources
-      h2.resource-feature__subheading Get a job/Get involved
+  .resource.feature__layer
+    .feature__container
+      h1.feature__heading Resources
+      h2.feature__subheading Get a job/Get involved
   
   .resource__layer
     .resource__container
       .resource__content
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
+        
+      div
         for item in resources
           .resource__item
-            h2.resource__heading=item.name
+            h2.resource__subheading=item.name
             .resource__links
               for link in item.links
-                a(href=`${link.url}` class="resource__button")=link.text
+                a(href=`${link.url}` class="resource__text-link")=link.text

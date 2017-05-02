@@ -1,33 +1,62 @@
 .resource
-  &-feature__layer
-    background-image url(img/resources-bw.jpg), linear-gradient(135deg, tomato, indigo)
-  //
-  &__layer
-    //
+  &.feature
+    &__layer
+      background-image url(img/resources-bw.jpg), linear-gradient(135deg, tomato, indigo)
+
   &__container
-    //
+    display block
+
   &__content
-    // display flex
-    // flex-direction row
-    // flex-wrap wrap
-    // width 100%
+    max-width 960px
+    margin 3rem auto
+
 
   &__item
     //background-color fog
-    border-bottom 1px solid fog
-    margin 1%
-    padding 2rem
+    // border-bottom 1px solid fog
+    // margin 1%
+    // padding 2rem
+    // text-align center
     // flex-basis 30%
-
-  &__heading
-    color charcoal
-    text-shadow -3px 3px 0 fog
-    font-size 2rem
-    font-weight normal
-    padding-bottom 1rem
+    border-bottom 1px solid fog
+    display flex
+    align-items center
+    justify-content flex-start
     text-align left
 
+    &:hover
+      background-color #0fc
+
+    &:nth-of-type(even)
+      background-color #f5f5f5
+
+      &:hover
+        background-color #0fc
+
+  &__subheading
+    color charcoal
+    text-shadow none
+    font-size 1rem
+    font-weight normal
+    line-height 1
+    padding-left 1rem
+    text-align left
+    //flex-basis 50%
+
   &__links
-    //
+    //flex-basis 50%
+    padding-left 2rem
+
   &__button
     margin-right 1rem
+    display inline-flex
+
+  &__text-link
+    color indigo
+    display inline-block
+    font-weight 100
+    padding .5rem
+
+    &:hover
+      background-color indigo
+      color white
