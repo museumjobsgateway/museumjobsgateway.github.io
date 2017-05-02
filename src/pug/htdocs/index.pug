@@ -10,10 +10,10 @@ block seo
 block page
   //- include ../includes/home/feature
   
-  .homepage-feature__layer
-    .homepage-feature__container
-      h1.homepage-feature__heading Work at a museum
-      h2.homepage-feature__subheading Here's why
+  .homepage.feature__layer
+    .feature__container
+      h1.feature__heading Work at a museum
+      h2.feature__subheading Here's why
       a(href="#" id="scrollButton")
         icon(name="ei-arrow-down" size="m" class="lookdown")
       
@@ -38,21 +38,28 @@ block page
         .frame-border
           .frame-inset
             h3#stat1.stats__number 1,700
-        h2#stat1Heading.stats__subheading people are employed by St. Louis area museums
+        h2#stat1Heading.stats__subheading people are employed by St. Louis area museums <span class='dataSource'>GuideStar</span>
         
     .stats__container
       #stat2Box.stats__box
         .frame-border
           .frame-inset
             h3#stat2.stats__number 40
-        h2#stat2Heading.stats__subheading Museum and Non-profit arts and culture institutions in the St. Louis total more than
+        h2#stat2Heading.stats__subheading Museum and Non-profit arts and culture institutions in the St. Louis total more than <span class='dataSource'>GuideStar</span>
         
     .stats__container
       #stat3Box.stats__box
         .frame-border
           .frame-inset
             h3#stat3.stats__number 120
-        h2#stat3Heading.stats__subheading million people visit Midwest museums each year
+        h2#stat3Heading.stats__subheading million people visit Midwest museums each year <span class='dataSource'>Midwest Museum Association Website</span>
+        
+    .stats__container
+      #stat4Box.stats__box
+        .frame-border
+          .frame-inset
+            h3#stat4.stats__number TRUST
+        h2#stat4Heading.stats__subheading Museums are considered the most trustworthy source of information in America, rated higher than local papers, nonprofits researchers, the U.S. government, or academic researchers (22) <span class='dataSource'>Lake, Snell, Perry public opinion survey commissioned by the American Alliance of Museums (2001)</span>
       
   .gallery__layer
     .gallery__container

@@ -15,6 +15,10 @@ var stat3 = document.getElementById('stat3');
 var stat3Heading = document.getElementById('stat3Heading').classList;
 var stat3Box = document.getElementById('stat3Box').classList;
 
+var stat4 = document.getElementById('stat4');
+var stat4Heading = document.getElementById('stat4Heading').classList;
+var stat4Box = document.getElementById('stat4Box').classList;
+
 
 var easeOutCubic = function(t, b, c, d) {
     var ts = (t /= d) * t;
@@ -91,6 +95,18 @@ var inviewStat3 = new Waypoint.Inview({
     upStat3.reset();
     stat3Heading.remove('reveal');
     stat3Box.remove('move');
+  }
+});
+
+var inviewStat4 = new Waypoint.Inview({
+  element: stat4,
+  entered: function(direction) {
+    stat4Heading.add('reveal');
+    stat4Box.add('move');
+  },
+  exited: function(direction) {
+    stat4Heading.remove('reveal');
+    stat4Box.remove('move');
   }
 });
 
