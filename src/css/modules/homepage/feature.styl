@@ -2,12 +2,19 @@
   &__layer
     background-image url(img/museum-bw.jpg), linear-gradient(135deg, #0fc, indigo)
   //
-  &__layer
-    //
+.feature
   &__container
-    //
-  &-feature__subheading
-    font-size 3rem
+    +below(660px)
+      padding-top 5rem
+
+  &__heading
+    +below(660px)
+      font-size 3rem
+
+  &__subheading
+    +below(660px)
+      font-size 1.5rem
+
   &__content
     //
   &__item

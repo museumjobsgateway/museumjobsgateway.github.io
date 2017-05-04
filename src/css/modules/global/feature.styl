@@ -3,9 +3,14 @@
   // background-image url(img/museum-bw.jpg), linear-gradient(135deg, #0fc, indigo)
   background-blend-mode overlay
   background-repeat no-repeat
+  background-position center center
   background-size cover
   height 100vh
   position relative
+
+  +below(660px)
+    //background-attachment scroll
+    background-position center 100px
 
 [class*='feature__container']
   display flex

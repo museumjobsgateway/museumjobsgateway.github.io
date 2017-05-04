@@ -18,6 +18,9 @@
     max-width 100%
     //font-size 1rem
 
+    +below(910px)
+      flex-direction column
+
   &__heading
     color indigo
     line-height 1.5
@@ -41,6 +44,9 @@
     align-items center
     justify-content center
 
+    +below(660px)
+      flex-wrap wrap
+
     a
       display block
       font-family: Condensed.font
@@ -49,6 +55,13 @@
       display inline-block
       font-weight 400
       padding .5rem 1rem
+
+      +below(660px)
+        border 1px solid indigo
+        padding .1rem
+        margin .1rem
+        flex 1 0 30%
+        text-align center
 
       &:hover
         background-color indigo

@@ -21,13 +21,17 @@
       background-color indigo
       height auto
     &:nth-of-type(2)
-      background-color lighten(indigo, 10%)
+      background-color lighten(indigo, 5%)
     &:nth-of-type(3)
-      background-color lighten(indigo, 20%)
+      background-color lighten(indigo, 10%)
     &:nth-of-type(4)
-      background-color lighten(indigo, 30%)
+      background-color lighten(indigo, 15%)
     &:nth-of-type(5)
-      background-color lighten(indigo, 40%)
+      background-color lighten(indigo, 20%)
+
+      .stats__subheading
+        +below(660px)
+          font-size 1rem
 
     &:nth-of-type(odd)
       .stats__box
@@ -35,18 +39,30 @@
         transform translateX(-20%)
         will-change transform
 
+        +below(660px)
+          flex-direction column
+
         &.move
           transform translateX(0)
 
         .stats__subheading
           text-align right
 
+          +below(660px)
+            text-align left
+
   &__heading
     padding 5rem 0
+
+    +below(660px)
+      padding 5rem 1rem
 
   &__number
     font-size 5rem
     text-align center
+
+    +below(660px)
+      font-size 2.5rem
 
   &__subheading
     flex 2
@@ -56,6 +72,9 @@
     opacity 0
     transition opacity 3s
     will-change transform
+
+    +below(660px)
+      padding 2rem 1rem
 
     &.reveal
       opacity 1
@@ -68,6 +87,9 @@
     transform translateX(20%)
     transition transform 1.5s ease-in-out
 
+    +below(660px)
+      flex-direction column
+
     &.move
       transform translateX(0)
 
@@ -78,6 +100,8 @@
   width 400px
   //max-width 25rem
   //height 547px
+  +below(660px)
+    width 300px
 
 .frame-inset
   box-shadow inset 0 1px 5px rgba(0, 0, 0, 0.5)
@@ -85,7 +109,7 @@
   border 32px solid #f5f5f5
   max-width 100%
   max-height 100%
-  padding 3rem 0
+  padding 1.5rem 0
 
   &:before
     content: ''
@@ -99,7 +123,7 @@
     box-shadow inset 0 20px 20px rgba(0, 0, 0, 0.3)
 
 .dataSource
-  color charcoal
+  color cyan
   font-size .8rem
   text-shadow none
 
